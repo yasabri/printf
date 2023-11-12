@@ -39,10 +39,9 @@ int print_d(va_list args);
 int _strlen(char *s);
 int rev_string(char *s);
 int print_37(void);
-int print_c(va_list val);
-int print_s(va_list val);
+int fun_STR(char *buf, int comp, va_list val);
+char *conv(unsigned long int n, int b, int uc)
 int _putchar(char c);
 int _printf(const char *format, ...);
 
 #endif
-
