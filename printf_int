@@ -4,7 +4,7 @@
  * @args: argument to print
  * Return: integer
  */
-int print_int(va_list args);
+int print_i(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
@@ -49,7 +49,7 @@ int print_int(va_list args);
  * Return: integer
  */
 
-int print_dec(va_list args);
+int print_d(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit;
