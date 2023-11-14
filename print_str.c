@@ -149,7 +149,7 @@ int print_int(va_list types, char buffer[],
 int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	unsigned int n, m, w, sum;
+	unsigned int v, m, w, sum;
 	unsigned int a[32];
 	int y;
 
@@ -159,13 +159,13 @@ int print_binary(va_list types, char buffer[],
 	UNUSED(precision);
 	UNUSED(size);
 
-	n = va_arg(types, unsigned int);
+	v = va_arg(types, unsigned int);
 	m = 2147483648;
-	a[0] = n / m;
+	a[0] = v / m;
 	for (w = 1; w < 32; w++)
 	{
 		m /= 2;
-		a[w] = (n / m) % 2;
+		a[w] = (v / m) % 2;
 	}
 	for (w = 0, sum = 0, y = 0; w < 32; w++)
 	{
