@@ -144,7 +144,7 @@ int print_int(va_list types, char buffer[],
  * @flags: Calculates active flags
  * @width: width
  * @precision: Precision specification
- * @size: Size 
+ * @size: Size
  * Return: Numbers of char that printed
  */
 int print_binary(va_list types, char buffer[],
